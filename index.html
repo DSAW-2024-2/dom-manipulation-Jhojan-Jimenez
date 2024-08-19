@@ -3,16 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Carrusel</title>
   </head>
-  <body class="bg-blue-200 h-screen flex items-center justify-center">
-    <div id="pos" class="mr-4 text-4xl">0</div>
-    <div class="bg-white flex flex-row items-center gap-2 p-2">
-      <button id="left"><--</button>
-      <div><img src="assets/image_1.jpg" alt="img" id="img" /></div>
-      <button id="right">--></button>
-    </button>
+  <body>
+    <div id="container">
+      <button id="leftbutton" disabled>
+        <img src="assets/caret-left-fill.svg" alt="" id="img-l" />
+      </button>
+      <button id="rightbutton">
+        <img src="assets/caret-right-fill.svg" alt="" />
+      </button>
+      <img src="assets/image_1.jpg" alt="actual-Img" id="img" />
+    </div>
+    <div id="label">
+      <div id="label-0" class="orange"></div>
+      <div id="label-1"></div>
+      <div id="label-2"></div>
+    </div>
   </body>
   <script src="main.js"></script>
 </html>
