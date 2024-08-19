@@ -11,15 +11,17 @@ let actualImg = 0;
 
 function disable() {
   leftbutton.disabled = actualImg === 0 ? true : false;
-  rightbutton.disabled = actualImg === 3 ? true : false;
+  rightbutton.disabled = actualImg === 2 ? true : false;
   pos.textContent = actualImg;
 }
 
 leftbutton.addEventListener("click", () => {
-  img.src = imgs[actualImg--];
+  img.src = imgs[actualImg - 1];
+  actualImg--;
   disable();
 });
 rightbutton.addEventListener("click", () => {
-  img.src = imgs[actualImg++];
+  img.src = imgs[actualImg + 1];
+  actualImg++;
   disable();
 });
